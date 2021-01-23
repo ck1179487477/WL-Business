@@ -1,0 +1,92 @@
+<div>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top:1em;margin-bottom: 1em; ">
+            <div class="col-sm-5" style="margin:1em 2em 0em 2em;">
+                <div class="media" style="background-color:whitesmoke;border-radius:2%">
+                    <img *ngIf="aaa==0" src="../../assets/imgs/led_off.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <img *ngIf="aaa==1" src="../../assets/imgs/led_on.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">LIGHT1</h5>
+                        <p>{{aaa$.num}}</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5" style="margin:1em 2em 0em 2em;">
+                <div class="media" style="background-color:whitesmoke;border-radius:2%">
+                    <img *ngIf="bbb==0" src="../../assets/imgs/led_off.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <img *ngIf="bbb==1" src="../../assets/imgs/led_on.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">LIGHT2</h5>
+                        <p>{{bbb$.num}}</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center" style="margin-top:0em;margin-bottom: 1em; ">
+            <div class="col-sm-5" style="margin:1em 2em 0em 2em;">
+                <div class="media" style="background-color:whitesmoke;border-radius:2%">
+                    <img *ngIf="ccc==0" src="../../assets/imgs/led_off.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <img *ngIf="ccc==1" src="../../assets/imgs/led_on.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">LIGHT3</h5>
+                        <p>{{ccc$.num}}</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5" style="margin:1em 2em 0em 2em;">
+                <div class="media" style="background-color:whitesmoke;border-radius:2%">
+                    <img *ngIf="ddd==0" src="../../assets/imgs/fan_off.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <img *ngIf="ddd==1" src="../../assets/imgs/fan_on.jpg" style=" width: 70px;"
+                        class="align-self-left mr-3" alt="...">
+                    <div class="media-body">
+                        <h5 class="mt-0">FAN</h5>
+                        <p>{{ddd$.num}}</p>
+                        <p class="mb-0"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-bottom: 1em; ">
+            <div class="col-sm-10" style="margin:1em 2em 0em 2em;">
+                <div class="card-body" style="background-color: whitesmoke;">
+                    <div echarts [options]="chartOptionbar" [merge]="updateOptionbar"> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center" style="margin-top:1em;margin-bottom: 1em; ">
+            <div class="col-sm-4" style="margin:1em 2em 0em 2em;">
+                <div class="card" style="margin-bottom: 1em; ">
+                    <div class="card-body" style="background-color: whitesmoke;">
+                        <h5 class="card-title" style="text-align: center;">停放车辆数量:{{car$.num}}</h5>
+                        <!-- <p class="card-text" style="text-align: center;">{{car$.num}}</p> -->
+                    </div>
+                </div>
+                <div class="card" style="height: 22em;">
+                    <div class="card-body" style="background-color: whitesmoke;">
+                        <div echarts [options]="chartOptionpie" [merge]="updateOptionpie"> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="margin:1em 2em 0em 2em;">
+                <div class="card">
+                    <div class="card-body" style="background-color: whitesmoke;">
+                        <div echarts [options]="chartOptionline" [merge]="updateOptionline"> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
